@@ -1,0 +1,70 @@
+.novel-card {
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+    max-width: 200px;
+    min-height: 400px;
+}
+.novel-cover {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 5;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.novel-card h1 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 5px 0;
+    letter-spacing: 0.1px;
+}
+
+.novel-card h2 {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 5px 0;
+}
+
+.novel-card h3 {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 5px 0;
+}
+
+.novel-card p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 5px 0;
+}
+.novel-card-link {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: block;
+    border-radius: 10px;
+}
+.novel-card-link:hover {
+    text-decoration: none;
+    color: inherit;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.novel-genres{
+    display: flex;
+    gap: 5px;
+    justify-content: left;
+    margin: 5px 0;
+    font-size: 12px;
+}
+.novel-genres span{
+    background-color: #ebe6ef;
+    color: #000000;
+    padding: 0 3px;
+    border-radius: 5px;
+}

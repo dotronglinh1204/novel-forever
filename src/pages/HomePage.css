@@ -1,0 +1,23 @@
+.novel-list {
+    display: grid;
+    padding: 0;
+    margin: 0;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.all-novels {
+    margin-bottom: 50px;
+}
+.all-novels a {
+    text-decoration: none;
+}
+.all-novels-title {
+    color: #030303;
+}
+.all-novels-title:hover {
+    color: #7e8f45;
+}
+@media (max-width: 800px) {
+    .novel-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}

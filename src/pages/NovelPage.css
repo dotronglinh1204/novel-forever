@@ -1,0 +1,218 @@
+.related-novels {
+    display: grid;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.novel-detail {
+    margin-top: 50px;
+
+}
+.novel-info{
+    display: flex;
+    padding: 20px;
+    border: 1px solid #c5c3c3;
+    border-radius: 10px;
+    gap: 30px;
+}
+.novel-detail-cover {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    aspect-ratio: 3 / 5;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.novel-detail-info {
+    text-align: left;
+}
+.novel-detail-info h1 {
+    font-family: Merriweather, Georgia, serif;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 0.9px;
+    margin: 0;
+    line-height: 1.3;
+}
+.novel-detail-info p {
+    font-size: 16px;
+    line-height: 1.5;
+    color:rgb(68, 67, 67);
+    margin: 5px 0;
+}
+.novel-detail-info span {
+    color:rgb(0, 0, 0);
+    font-weight: 600;
+}
+.novel-detail-actions {
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 5px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #000000;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+}
+.novel-detail-actions:hover {
+    background-color: #5a5959;
+}
+.novel-detail-content {
+    border: 1px solid #c5c3c3;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.novel-detail-tabs {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid #c5c3c3;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.novel-detail-tabs button {
+    font-size: 16px;
+    color: #030303;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    text-align: center;
+    flex: 1;
+    border-right: 1px solid #c5c3c3;
+    white-space: nowrap;
+}
+.novel-detail-tabs button.active {
+    background-color: #000000;
+    color: #ffffff;
+}
+.novel-detail-tabs button:hover {
+    background-color: #5a5959;
+}
+.novel-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color:rgb(68, 67, 67);
+    margin: 20px;
+    text-align: left;
+}
+.novel-reviews {
+    margin: 20px;
+    text-align: left;
+    margin-left: 50px;
+}
+.novel-list-reviews {
+    list-style: none;
+    padding: 0;
+}
+.novel-review{
+    margin-bottom: 20px;
+    border-bottom: 1px solid #c5c3c3;
+    padding-bottom: 20px;
+    line-height: 1;
+    font-size: 16px;
+}
+.rating-stars {
+    display: flex;
+    margin-top: 10px;
+}
+.rating-stars span {
+    margin-right: 5px;
+    font-size: 24px;
+}
+.star-filled {
+  color: #e5b700;
+}
+.star-empty {
+  color: #ccc;
+}
+.star-button {
+    font-size: 36px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    background-color: transparent;
+}
+.star-button:hover {
+  color: #e5b700;
+}
+.review-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+    text-align: center;
+}
+.review-form .rating-stars {
+    justify-content: center;
+}
+.review-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 700px;  
+    width: 100%;
+    min-height: 100px;
+    resize: vertical;
+}
+.review-input:hover{
+    border-color: #000000;
+}
+.review-input:focus {
+    outline: none;
+    border-color: #7e8f45;
+    box-shadow: 0 0 5px rgba(150, 197, 97, 0.5);
+}
+.review-submit-button {
+    margin-top: 10px;
+    padding: 10px 30px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.review-submit-button:hover {
+    background-color: #5a5959;
+}
+.novel-chapters {
+    margin: 20px;
+    text-align: left;
+    font-size: 16px;
+}
+.novel-list-chapters {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 30px;
+    list-style: none;
+    padding: 0;
+    max-height: 400px;
+    overflow-y: scroll;
+}
+.novel-chapter {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #c5c3c3;
+    padding-bottom: 20px;
+}
+.novel-chapter a {
+    text-decoration: none;
+    color: #000000;
+}
+.novel-chapter a:hover {
+    color: #817f7f;
+}
+@media (max-width: 800px) {
+    .related-novels {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    .novel-reviews {
+        margin-left: 15px;
+    }
+    .novel-detail-tabs button {
+        padding: 10px 5px;
+    }
+}

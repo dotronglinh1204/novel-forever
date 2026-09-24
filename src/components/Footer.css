@@ -1,0 +1,23 @@
+.footer-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: transparent;
+        padding: 20px 0;
+        border-top: 1px solid #c5c3c3;
+        margin-top: 50px;
+}
+.footer-logo-container {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+}
+.footer-logo {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+}
+.footer-text {
+        font-size: 14px;
+        color: #777;
+}

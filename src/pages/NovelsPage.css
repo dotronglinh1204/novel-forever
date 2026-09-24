@@ -1,0 +1,72 @@
+.novel-list {
+    display: grid;
+    padding: 0;
+    gap : 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.genre-select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: #f7f8f9;
+    color: #030303;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    width: 240px;
+    margin: 20px 0;
+}
+.genre-select:hover {
+    background-color: #e5e5e5;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+.pagination-nav {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f7f8f9;
+    color: #030303;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    width: 100px;
+}
+.pagination-nav:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.pagination-nav:hover {
+    background-color: #e5e5e5;
+}
+.pagination-page-number {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f7f8f9;
+    color: #030303;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    width: 30px;
+}
+.pagination-page-number:hover {
+    background-color: #e5e5e5;
+}
+.pagination-page-number.active {
+    background-color: #000000;
+    color: #fff;
+}
+@media (max-width: 800px) {
+    .novel-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    .genre-select {
+        width: 100%;
+        max-width: 240px;
+    }
+}

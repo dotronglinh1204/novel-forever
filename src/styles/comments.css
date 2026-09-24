@@ -1,0 +1,50 @@
+.novel-comments {
+    margin: 20px;
+    text-align: left;
+    font-size: 16px;
+    margin-left: 50px
+}
+.novel-list-comments {
+    list-style: none;
+    padding: 0;
+}
+.novel-comment  {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #c5c3c3;
+    padding-bottom: 20px;
+    line-height: 1;
+}
+.comment-form {
+    margin: 30px 0;
+    text-align: center;
+}
+.comment-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 700px;  
+    width: 100%;
+}
+.comment-input:hover{
+    border-color: #000000;
+}
+.comment-input:focus {
+    outline: none;
+}
+.comment-submit-button {
+    margin-top: 10px;
+    padding: 10px 30px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.comment-submit-button:hover {
+    background-color: #5a5959;
+}
+@media (max-width: 800px) {
+    .novel-comments {
+        margin-left: 15px;
+    }
+}

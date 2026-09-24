@@ -1,0 +1,86 @@
+.read-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.novel-reading-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+.chapter-content {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: left;
+}
+.chapter-content p {
+    margin-bottom: 20px;
+    font-family: Merriweather, Georgia, serif;
+}
+.chapter-navigation-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.chapter-navigation-top a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    border: 1px solid #000000;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.chapter-navigation-top a:hover {
+    color: #817f7f;
+}
+.chapter-select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f7f8f9;
+    color: #030303;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.chapter-select:hover {
+    background-color: #e5e5e5;
+}
+.chapter-navigation-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.chapter-navigation-bottom a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    border: 1px solid #000000;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.chapter-navigation-bottom a:hover {
+    color: #817f7f;
+}
+@media (max-width: 800px) {
+    .chapter-navigation-top {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .chapter-navigation-top a {
+        text-align: center;
+    }
+
+    .chapter-select {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        width: 100%;
+    }
+}
