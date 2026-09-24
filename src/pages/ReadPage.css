@@ -77,10 +77,15 @@
     .chapter-navigation-top a {
         text-align: center;
     }
-
     .chapter-select {
         grid-column: 1 / -1;
         grid-row: 2;
         width: 100%;
+    }
+    .chapter-navigation-bottom, .chapter-navigation-top {
+        font-size: 15px;
+    }
+    .chapter-content {
+        font-size: 18px;
     }
 }
