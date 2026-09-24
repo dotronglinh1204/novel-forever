@@ -15,6 +15,10 @@ export default function ReadPage() {
     const [comment, setComment] = useState("");
     const [novelComments, setNovelComments] = useState([]);
     const [commentError, setCommentError] = useState("");
+    const previousChapter = novel?.chapters.find((chapter) => chapter.id === Number(chapterID) - 1);
+    const nextChapter = novel?.chapters.find((chapter) => chapter.id === Number(chapterID) + 1);
+    const previousLink = previousChapter ? `/novel/${novel.slug}/chapter/${previousChapter.id}` : `/novel/${novel.slug}`;
+    const nextLink = nextChapter ? `/novel/${novel.slug}/chapter/${nextChapter.id}` : `/novel/${novel.slug}`;
     useEffect(() => {  
         if (!chapter) {
             return;
@@ -65,6 +69,23 @@ export default function ReadPage() {
         }
         setNovelComments(comments.filter((comment) => comment.novelId === novel.id));
     }, [novel]);
+    useEffect(() => {
+        const handleKeyDown = (event) => {
+            if (event.key === "ArrowLeft" && previousChapter) {
+                navigate(previousLink);
+            }
+
+            if (event.key === "ArrowRight" && nextChapter) {
+                navigate(nextLink);
+            }
+        };
+
+        window.addEventListener("keydown", handleKeyDown);
+
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown);
+        };
+}, [previousChapter, nextChapter, previousLink, nextLink, navigate]);
     if (!novel) {
         return (
             <div>
@@ -99,10 +120,6 @@ export default function ReadPage() {
         setNovelComments([...novelComments, newComment]);
         setComment("");
     }
-    const previousChapter = novel?.chapters.find((chapter) => chapter.id === Number(chapterID) - 1);
-    const nextChapter = novel?.chapters.find((chapter) => chapter.id === Number(chapterID) + 1);
-    const previousLink = previousChapter ? `/novel/${novel.slug}/chapter/${previousChapter.id}` : `/novel/${novel.slug}`;
-    const nextLink = nextChapter ? `/novel/${novel.slug}/chapter/${nextChapter.id}` : `/novel/${novel.slug}`;
     const paragraphs = chapterContent.split(/\n\s*\n/);
     return ( 
         <div className="read-page">
