@@ -126,7 +126,7 @@ export default function ReadPage() {
             <Link to={`/novel/${novel.slug}`} className="novel-reading-title">{novel.title}</Link>
             <div className="chapter-navigation-top">
                 <Link to={previousLink}>
-                    {previousChapter ? "← Chương trước" : "← Về trang truyện"}
+                    {previousChapter ? "← Chương trước" : "← Quay lại"}
                 </Link>
                 <select
                 className="chapter-select"
@@ -140,7 +140,7 @@ export default function ReadPage() {
                     ))}
                 </select>
                 <Link to={nextLink}>
-                    {nextChapter ? "Chương sau →" : "Về trang truyện →"}
+                    {nextChapter ? "Chương sau →" : "Kết thúc →"}
                 </Link>
             </div>
 
