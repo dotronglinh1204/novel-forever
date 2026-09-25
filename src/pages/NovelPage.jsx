@@ -162,7 +162,7 @@ export default function NovelPage() {
                     <p>Tác giả:<span> {novel.author} </span></p>
                     <p>Số chương:<span> {novel.chapters.length} </span></p>
                     {firstChapter && (
-                        <Link className="novel-detail-actions" to={`/novel/${novel.slug}/chapter/${firstChapter.id}`}>Đọc từ đầu</Link>
+                        <Link className="novel-detail-actions" to={`/novel/${novel.slug}/chapter/${firstChapter.id}`}>Đọc truyện</Link>
                     )}
                 </div>
             </div>
@@ -171,7 +171,7 @@ export default function NovelPage() {
                     <button className={activeTab === "intro" ? "active" : ""} onClick={() => setActiveTab("intro")}>Giới thiệu</button>
                     <button className={activeTab === "rating" ? "active" : ""} onClick={() => setActiveTab("rating")}>Đánh giá</button>
                     <button className={activeTab === "comments" ? "active" : ""} onClick={() => setActiveTab("comments")}>Bình luận</button>
-                    <button className={activeTab === "chapters" ? "active" : ""} onClick={() => setActiveTab("chapters")}>Danh sách chương </button>
+                    <button className={activeTab === "chapters" ? "active" : ""} onClick={() => setActiveTab("chapters")}>D.S Chương </button>
                 </div>
                 <div className="novel-detail-tab-content">
                     {content}
