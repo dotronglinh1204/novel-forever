@@ -215,4 +215,13 @@
     .novel-detail-tabs button {
         padding: 10px 5px;
     }
+    .novel-detail-cover {
+        max-width: 120px;
+    }
+    .novel-detail-info h1 {
+        font-size: 24px;
+    }
+    .novel-detail-info p {
+        font-size: 14px;
+    }
 }
